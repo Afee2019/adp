@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@antv/l7-react'
+  - '@scarf/scarf'
+  - core-js
+  - core-js-pure
+  - es5-ext
+  - esbuild
+  - puppeteer-core
+  - unrs-resolver
