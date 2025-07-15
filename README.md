@@ -2,19 +2,23 @@
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
+## 🌐 Internationalization
+
+This project supports **simplified international approach** with only 2 core languages:
+- **🇨🇳 Chinese Simplified (zh-CN)** - Default language
+- **🇺🇸 English (en-US)** - International standard language
+
+*Note: We've streamlined from 8 languages to 2 core languages to reduce maintenance costs and improve development efficiency.*
+
 ## Environment Prepare
 
 Install `node_modules`:
 
 ```bash
-npm install
+pnpm install
 ```
 
-or
-
-```bash
-yarn
-```
+*Note: This project uses pnpm as the package manager.*
 
 ## Provided Scripts
 
@@ -25,31 +29,44 @@ Scripts provided in `package.json`. It's safe to modify or add additional script
 ### Start project
 
 ```bash
-npm start
+pnpm start
+# or without mock
+pnpm start:no-mock
 ```
 
 ### Build project
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ### Check code style
 
 ```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
+pnpm lint
+# or run biome lint only
+pnpm biome:lint
 ```
 
 ### Test code
 
 ```bash
-npm test
+pnpm test
+# or with coverage
+pnpm test:coverage
+```
+
+### Other useful scripts
+
+```bash
+# Generate OpenAPI
+pnpm openapi
+
+# Clean unused i18n keys
+pnpm i18n-remove
+
+# TypeScript check
+pnpm tsc
 ```
 
 ## More

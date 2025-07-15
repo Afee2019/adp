@@ -83,9 +83,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - TypeScript 严格模式启用
 
 ### 国际化
-- 默认语言：zh-CN
-- 支持语言：zh-CN, zh-TW, en-US, ja-JP, pt-BR, fa-IR, bn-BD, id-ID
+- 默认语言：zh-CN (简体中文)
+- 支持语言：zh-CN (简体中文), en-US (英文)
 - 配置文件位于 `src/locales/` 目录
+- 已精简语言支持，移除了繁体中文、日文、葡萄牙文、波斯文、孟加拉文、印尼文等语言
 
 ### Mock 和 API
 - 开发环境支持 mock 数据
