@@ -90,7 +90,7 @@ export const Applications: FC<Record<string, any>> = () => {
 
   return (
     <div className={styles.filterCardList}>
-      <Card bordered={false}>
+      <Card variant="borderless">
         <Form
           onValuesChange={(_, values) => {
             run(values);

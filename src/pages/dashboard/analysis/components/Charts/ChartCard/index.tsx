@@ -91,7 +91,21 @@ const ChartCard: React.FC<ChartCardProps> = (props) => {
     );
   };
 
-  const { loading = false, ...rest } = props;
+  // 解构时排除自定义属性，避免传递到 DOM 元素
+  const {
+    loading = false,
+    // biome-ignore lint/correctness/noUnusedVariables: 排除自定义属性
+    contentHeight,
+    // biome-ignore lint/correctness/noUnusedVariables: 排除自定义属性
+    total,
+    // biome-ignore lint/correctness/noUnusedVariables: 排除自定义属性
+    action,
+    // biome-ignore lint/correctness/noUnusedVariables: 排除自定义属性
+    avatar,
+    // biome-ignore lint/correctness/noUnusedVariables: 排除自定义属性
+    footer,
+    ...cardProps
+  } = props;
   return (
     <Card
       loading={loading}
@@ -100,7 +114,7 @@ const ChartCard: React.FC<ChartCardProps> = (props) => {
           padding: '20px 24px 8px 24px',
         },
       }}
-      {...rest}
+      {...cardProps}
     >
       {renderContent()}
     </Card>

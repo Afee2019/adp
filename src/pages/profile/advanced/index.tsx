@@ -362,7 +362,7 @@ const Advanced: FC = () => {
             style={{
               marginBottom: 24,
             }}
-            bordered={false}
+            variant="borderless"
           >
             <Descriptions
               style={{
@@ -473,12 +473,12 @@ const Advanced: FC = () => {
             style={{
               marginBottom: 24,
             }}
-            bordered={false}
+            variant="borderless"
           >
             <Empty />
           </Card>
           <Card
-            bordered={false}
+            variant="borderless"
             tabList={operationTabList}
             onTabChange={onOperationTabChange}
           >
