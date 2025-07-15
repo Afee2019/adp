@@ -9,7 +9,6 @@ import MonitorMap from './components/Map';
 import { queryTags } from './service';
 import useStyles from './style.style';
 
-const { Countdown } = Statistic;
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
 const Monitor: FC = () => {
@@ -48,10 +47,11 @@ const Monitor: FC = () => {
                 <Statistic title="销售目标完成率" value="92%" />
               </Col>
               <Col md={6} sm={12} xs={24}>
-                <Countdown
+                <Statistic.Timer
                   title="活动剩余时间"
                   value={deadline}
                   format="HH:mm:ss:SSS"
+                  type="countdown"
                 />
               </Col>
               <Col md={6} sm={12} xs={24}>
@@ -82,8 +82,10 @@ const Monitor: FC = () => {
             style={{
               marginBottom: 24,
             }}
-            bodyStyle={{
-              textAlign: 'center',
+            styles={{
+              body: {
+                textAlign: 'center',
+              },
             }}
             variant="borderless"
           >
@@ -157,8 +159,10 @@ const Monitor: FC = () => {
             title="热门搜索"
             loading={loading}
             variant="borderless"
-            bodyStyle={{
-              overflow: 'hidden',
+            styles={{
+              body: {
+                overflow: 'hidden',
+              },
             }}
           >
             <WordCloud
@@ -181,9 +185,11 @@ const Monitor: FC = () => {
         >
           <Card
             title="资源剩余"
-            bodyStyle={{
-              textAlign: 'center',
-              fontSize: 0,
+            styles={{
+              body: {
+                textAlign: 'center',
+                fontSize: 0,
+              },
             }}
             variant="borderless"
           >
